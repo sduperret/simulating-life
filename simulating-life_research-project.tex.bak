@@ -1,0 +1,208 @@
+\documentclass{article}
+\usepackage [english]{babel}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    linktoc=all, %set to all if you want both sections and subsections linked
+}
+\usepackage{cite}
+\usepackage{lipsum}
+
+\usepackage{authblk} %FOR CENTER AUTHOR IMPORTANT !!! DONT ERASE
+
+
+%$ $\\ $ $ \\$ $\\ $ $ \\
+\title{$ $\\ $ $ \\$ $\\ $ $ \\$ $\\{\huge Legionellosis pneumophila bacterium\\Developmental factors and their impact}}
+\author{$ $\\{\LARGE Sacha Duperret}\\ $ $\\ \href{mailto:sduperret@u-bordeaux.fr}{sduperret@u-bordeaux.fr}\\University of Bordeaux,\\Simulating Life research team,\\Talence,\\France\texttt{}}
+\date{March 9, 2022}
+
+
+%Graphicx
+\usepackage{graphicx} %Loading the package
+\graphicspath{{images/}} %path to figures
+
+%\usepackage{indentfirst} %to indent section with "alinea" in french
+
+%\usepackage[printonlyused]{acronym}  %to add acronym list
+
+\begin{document}
+\maketitle
+\newpage \tableofcontents
+
+\vspace*{2.5cm}
+\listoffigures
+
+%-----------------------------------
+\newpage \section*{Abbreviations}
+\textbf{USA} United States of America
+
+%-----------------------------------
+\newpage \section*{Abstract}
+Provinding safe water for dinking and cooking has ever been a problem for humanity. For many years, engineers has taken different path for all people to get water in there house. This is a everybody problem. Now, having water at home is not an issue; have safe water is different. The water tends to stagnate and facilitates, among others, the development of pathogenes. The population that inhales pathogens tends to be sick, especially of pneumonia in the case of Legionella pneumophila.
+
+\paragraph{Bacteria details} Legionella pneumophila is a ubiquitous bacterium, which colonizes artificial environments, wet soils as well as natural fresh water\cite{jarraud2007legionellose}.
+
+\paragraph{Bacteria transmission} Bacteria are transmitted to humans by aerosolization and less often by aspiration (to the lung) of colonized water. For now, relation between infection and water ingestion (to digestive organs) is not demonstrated.
+
+%Photo by Janice Haney Carr, Dr. Rodney Donlan, USCDCP
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.40]{legionella_pneumophila_picture}
+	\caption{Legionella pneumophila bacteria (microscopy image)}
+	\author{Photo by Janice Haney Carr, Dr. Rodney Donlan, USCDCP}
+	\label{lab1:picture1}
+\end{figure}
+
+%-----------------------------------
+\newpage \section{Introduction}
+\subsection{Background}
+This research is conduct for the simulating life course, at the University of Bordeaux, Talence, France. The study goals is about L. pneumophila growing. Indeed this bacteria has an ability to cause Legionellosis disease.
+
+\subsection{Objectives}
+The objective is to consolidate the current data on these bacteria by testing them in a mathematical/computer simulation.
+This study is simulating various factor (for now only including basic bacteria colony growing $\Rightarrow$ in the future the objective is to add characteristics $\in$ temperature, water flow, pression, ... $\Rightarrow$ with effect on the bacteria\footnote{Bacteria is plurial of bacterium} colony.
+
+\subsection{Methods}
+We started by simulating a bacteria colony growing normally and then added some characteristics with logic blocks which make explicit all the rules for the colony to grow (e.g. the bacteria can only grow between certain temperature).
+
+\subsection{Results}
+After simulating a lot of randomized situation with the slnova.org$\copyright$, we can see a statistical trend for the colony to grow much more with certain characteristics between limits. \textit{The intresting thing is that bacteria can develop without all the specific needs to be filled} ON WORK.
+
+%SLnova logo
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{logoslnova}
+	\caption{SLnova.org logo (MIT)}
+	\author{From StarLogo Nova, it is a project of the MIT Scheller Teacher Education Program}
+	\label{lab1:logo1}
+\end{figure}
+
+\subsection{Discussion}
+Many research team are currently working on legionella pneumophila bacterium and all the caracteristics we discuss on this report. The scientific bases and datas used may evolute. For update you can found the public project of this study, fork and update him.
+The result of the study can be discussed, indeed there are biases in the simulation programming that favor bacteria that have certain characteristics
+
+%-----------------------------------
+\newpage \section{Legionellosis}
+\subsection{Legionellosis disease}
+\paragraph{Clinical description}
+Human legionellosis is a form of bacterial pneumonia of varying severity, sometimes fatal. Signs and symptoms includes high to moderate fiver, cough, muscle pain, headaches, shortness of breath. Sometimes digestive disorders sucha as nausea, vomiting and diarrhea, as well as neurological disorders occur.\\
+The signs of poor prognosis identified concern: \begin{itemize}
+\item use of assisted ventilation,
+\item advaced age,
+\item kidney disease,
+\item cancer,
+\item immunosuppression,
+\item prolonged delay in administering medication. \end{itemize}
+The dignostic is confirmed radiologically in front of an acute pneumonia of bacterial origin. The duration of the incubation of legionellosis (and therefore the period of exposure) varies from 2 to 10 days\footnote{During this time, the patient is not sick but carrier of the disease, so he can transmit it}. 
+
+\paragraph{Bacteria transmission} Bacteria are transmitted to humans by aerosolization and less often by aspiration (to the lung) of colonized water. For now, relation between infection and water ingestion (to digestive organ) is not demonstrated.
+
+%Aspiration VS inhalation ATTENTION NOT INGESTED
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{legionella-inhaleVSaspirate}
+	\caption{illustration of aspiration compared to inhalation}
+	\author{From Virginia departement of Health and Centers from Disease Control and Prevention}
+	\label{lab1:illustration1}
+\end{figure}
+
+
+\paragraph{Pathophysiology}
+The disease is caused by twenty of the 30 species of the identified group of bacteria (in 1991\cite{nguyen1991legionellosis}), now more than 60 spices have been identified\textbf{TO CITE}.
+
+\paragraph{Epidemiology}
+Frequency of legionella pneumophila bacterium for community-acquired pneumonia is 0.5 to 10\%\footnote{it is a statistic that varies a lot depending on location and population criteria mainly}.
+
+\subsection{Legionella pneumophila}
+The legionella pneumophila is the primary humanpathogenic bacterium ([it] represents 80\% bacteria that cause legionellosis \textbf{CITE}) in this group and the causative agent of Legionnaires' disease\cite{nguyen1991legionellosis} (other name of Legionellosis disease). This bacteira is thin, aerobic, pleomorphic, flagellated, non-spore forming and gram-negative bacterium of the genus Legionella.
+
+\paragraph{Bacteria location}
+The bacterium is found naturally in fresh water. It can also contaminate hot water tanks, cooling towers. 
+
+\paragraph{Detection}
+The bacteria can be detected by immunofluorescence techiques. A fluorescent marker antibody come attach to the bacteria. This is a technique called indirect fluorescent antibody. Other tests like ELISA and microagglutination tests may be applied.\\
+For clinical use, the appearance of simple diagnostic in urine tests has favored the search for specific antigens. It helped a lot in cluster discovery. Indeed, if there are much cases of legionellosis, there must be a source of bacteria somewhere near.
+
+\paragraph{Biophysiology}
+Legionella pneumophilia is a facultative intracellular parasite that can invade and replicate inside amoebae (a biological organism which has ability to alter its shape by extending and retracting pseudopods). Legionella pneumophilia bacteria uses these biological as reservoirs. They provide protection from stress from the environnement (e.g. chlorination of water, temperature).
+
+\paragraph{Proliferation} 
+The bacteria has ability to proliferate on the walls of pipes (biofilms). L. pneumophilia can be aerolized throught showers, sprinklers and other fixtures which may leads to to infection (after prolonged exposure). When aerolized in mist aire, the bacteria can spread too.
+
+\paragraph{Statistics}
+This bacteria is the cause agent for most of the legionellosis disease. In the USA, there are approximately 3 infections with L. pneumophilia for 100 000 peoples each years. There are a peak in the summer. In endemic regions (regions where legionellosis disease is more present) about 4\% to 5\%. In France, in 2005, the compulsory declaration took into account 1527 cases of legionellosis representing 2 cases per 100,000 inhabitants\footnote{Which is similar to USA statistics}. On the next figure, you can see the distribution of legionnaires' disease in Europe.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.35]{legionnairesDiseaseInEU}
+	\caption{Distribution of Legionnaires' disease cases by month, EU/EEA, 2015–2019}
+	\author{Legionnaires’ disease, Annual Epidemiological Report for 2019, European Center for Disease Prevention and Control}
+	\label{lab1:graph1}
+\end{figure}
+
+\paragraph{Synthesis}
+Legionella pneumophila is a bacterium that grows in water systems and is transmitted via aerosols. It is responsible for most bacterial pneumonia.
+
+%-----------------------------------
+\newpage \section{Simulating basics}
+\subsection{Simulation framework}
+For now the simulation may be separated in 4 zones. 
+The screen will be separated to display all 4 situations :
+\begin{enumerate}
+\item Control situation \textsl{(témoin in french)},
+\item Random characteristics situation,
+\item Other random characteristics situation,
+\item Another random characteristics situation.
+\end{enumerate}
+\textsl{\hyperref[sec:characteristics]{Characteristics will be discussed in a specific section later}}
+
+\subsection{Simulation mechanics}
+\paragraph{Basics mechanics}
+We don't simulate single bacteria (this is a "tactical" choice, if we use a micro-size = simulate bacteria one by one, we won't be able to properly stimulate macro-sized things i think) so we will have colony *$\cong$ item. The relation between them will be : for $n$ size there will be $10^n$ bacteria (n the value of size).
+
+\paragraph{Future mechanics goals}
+Make the bacteria capacity randomized (after looking scientific article for accurate simulation) for "surviving" extreme situation (e.g. water at 90 degre celcius, frozen water)
+
+\paragraph{Characteristics} \label{sec:characteristics} %after explaing the mechanic for the simulation
+For now the characteristic is only by the size of item. For next step, we want to talk about the need for L. pneumophila in standing water to grow.
+
+\paragraph{Next simulation objective}
+The idea is to simulate different speeds of water flow. Indeed, if the biological organism is sufficiently adapted to develop in high-flow water, it may be necessary to modify the sanitary measures of channeling, conservation / treatment of water. This will be a first mechanic for simulating colony.
+
+\subparagraph{Future characteristics goals}
+Other characteristics may be implemented, such as :
+\begin{itemize}
+\item Temperature (negative, low, ambient, high),
+\item Brightness/lighting or dark environment,
+\item Minimum colony size to allow for development.
+\end{itemize}
+The objective is to have mechanics relied to every of the previous characteristics so the bacteria can really "interact" with environment and the 4 (for now) different situation. The little problem for now is that the camera zoom reset after all refresh of the web page, and also the PC don't support more than 150 items size 1 or 2 moving and interacting : do each item may be a comlete colony and the size is relied ($10^n$ bacteria for $n$ size) to the number of bacteria ?
+
+%-----------------------------------
+\newpage \bibliographystyle{plain}
+\bibliography{bibliography}
+\newpage
+
+%----------------------------------- NON NECESSAIRE
+%\subsubsection*{Commentaires internes $->$ pour se rappeler; sera rapidement déplacé dans un document annexe !}
+%\cite{stout1997legionellosis} 
+%WHAT IS THIS ? Too old ?
+%
+%\cite{nguyen1991legionellosis}
+%Infectious Disease Clinics of North America, Legionellosis (1991) \\(link : https://www.sciencedirect.com/science/article/abs/pii/S0891552020304062 )
+%
+%\cite{smith2019multiple}
+%Multiple Sources of the Outbreak of Legionnaires' Disease in Genesee County, Michigan, in 2014 and 2015.
+%
+%\cite{jarraud2007legionellose} 
+%Article en français fin 3/12 pages vues !
+%https://www.orpha.net/data/patho/Pro/fr/Legionellose-FRfrPro815.pdf
+%
+%\cite{han2021effects} 
+%Effects of climate changes and road exposure
+%on the rapidly rising legionellosis incidence
+%rates in the United States
+
+
+\newpage
+
+\end{document}
