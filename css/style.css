@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap');
+
+:root {
+    --primary-color: #01254a; /* blue #047aed */
+    --secondary-color: #1c3fa8; /* blue #1c3fa8 */
+    --dark-color: #002240; /* dark blue #002240 */
+    --light-color: #f4f4f4;
+    --success-color:#5cb85c;
+    --error-color:#d9534f;
+    
+    /*Added not really helpful*/
+    --text-color-on-primary-color:#fff;
+    --text-color-on-backgroud:#333;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--text-color-on-backgroud);
+    line-height: 1.6;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+h1 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+code, pre {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+/*Navbar*/
+
+.navbar{
+    background-color: var(--primary-color);
+    color : var(--text-color-on-primary-color);
+    height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color-on-primary-color);
+    padding: 10 px;
+    margin: 0 10px;
+}
+
+.navbar .logo a {
+    font-size: 30px;
+}
+.navbar ul li a {
+    font-size: 25px;
+}
+
+.navbar li a:hover {
+    border-bottom: 2px white solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
+
+#color-change {
+    font-size: 25px;
+}
+
+/*Showcase*/
+
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color) ;
+    color:var(--text-color-on-primary-color);
+    position: relative;
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin: 20px 0;
+}
+
+.showcase-form p {
+    color: var(--secondary-color);
+    font-size: 23px;
+}
+
+.showcase ul li a {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.showcase .grid {
+    overflow: visible; /* pour effacer les curseurs de navigation haut/bas an affichant ce qui dépasse directement */
+    grid-template-columns: 55% auto;
+    gap: 30px;
+}
+
+.showcase-form {
+    position: relative;
+    top:60px;
+    height: 350px;
+    width: 450px; /* updated to match text leght*/
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end; /* to push form to the right */
+}
+
+.showcase-form .form-control {
+    margin: 30px 0;
+}
+
+.showcase-form input:focus {
+    outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left:0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+}
+
+/* Stats */
+
+.stats {
+    padding-top: 150px;
+}
+
+.stats-heading {
+    max-width: 500px;
+     margin: auto;
+}
+
+.stats .grid h3 {
+    font-size: 35px;
+}
+
+.stats .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Command line interface (= CLI)*/
+
+.cli .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.cli .grid > *:first-child { /*ne regarde que le premier élément de cli & grid */
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+}
+
+.cli img {
+    height: 400px;
+    width: auto;
+    justify-self:center;
+    border-radius: 20px;
+}
+
+/* Internships */
+
+.cloud .grid {
+    grid-template-columns: 5fr 3fr;
+}
+
+.cloud .container img {
+    border-radius: 20px;
+}
+
+.cloud{
+    border-bottom: 0;
+}
+
+/* Languages */
+
+.languages .flex {
+    flex-wrap: wrap;
+}
+
+.languages .card {
+    text-align: center;
+    margin: 18px 10px 0px; /*not 0 but 40px before*/
+    transition: transform 0.2s ease-in;
+}
+
+.languages .card h4 {
+    font-size: 20px;
+    margin-bottom: 0px; /*10px before*/
+}
+
+.languages .card:hover {
+    transform: translateY(-15px); /*negative moves up ; positive moves down */
+}
+
+/* Projects */
+
+.projects p,
+.me-head p {
+    margin: 20px 0;
+}
+
+.me-head img,
+.projects-head img {
+    width: 200px;
+    justify-self: flex-end;
+}
+
+.projects-sub-head img {
+    width: 300px;
+    justify-self: flex-end;
+    
+}
+
+.projects-main .card > i{ /* WHAT ??? */
+    margin-right: 20px;
+}
+
+.projects-main .grid {
+    padding: 30px;
+}
+
+.projects-main .grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+.projects-main .grid > *:first-child { /*ne regarde que le premier élément de cli & grid */
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+}
+
+.projects-main .grid > *:nth-child(2) { /* done myself */
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+}
+
+/*About me */
+
+.me-main h3 {
+    margin: 20px 0;
+}
+
+.me-main a:visited,
+.me-head a:link {
+    color:var(--dark-color);
+}
+
+.me-main a:active,
+.me-main a:hover,
+.me-main a:focus {
+    color:var(--primary-color);
+}
+
+.navbar-nav > .active > a {
+    color: var(--primary-color);
+}
+
+.me-main a {
+    color: #333;
+}
+
+.me-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+}
+
+.me-main nav li {
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+}
+
+.me-main a:hover {
+    font-weight: bold;
+}
+
+/* Footer */
+
+.footer .social a {
+    margin: 0 10px;
+}
+
+/* Tablets & under */
+@media(max-width: 768px) {
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid, 
+    .projects-main .grid,
+    .me-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .navbar ul li a,
+    .navbar .logo a {
+        font-size: 15px;
+    }
+
+    .showcase {
+        height: auto;
+    }
+
+    .showcase-text {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .showcase-form {
+        justify-self: center;
+        margin: auto;
+    }
+
+    .cli .grid > *:first-child { /*ne regarde que le premier élément de cli & grid */
+        grid-column: 1;
+        grid-row: 1 ;
+    }
+
+    .projects-head img,
+    .projects-sub-head img,
+    .me-head img {
+        text-align: center;
+    }
+
+    .projects-head,
+    .projects-sub-head,
+    .me-head img {
+        justify-self: center;
+    }
+}
+
+/* Smartphone */
+@media(max-width: 500px) {
+    .navbar {
+        height: 110px;
+    }
+
+    .navbar .flex {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
