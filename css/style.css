@@ -72,7 +72,8 @@ code, pre {
 }
 
 .navbar .logo a {
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: 599;
 }
 .navbar ul li a {
     font-size: 25px;
@@ -176,6 +177,26 @@ code, pre {
     font-weight: bold;
 }
 
+/* Rules */
+
+.rules {
+    padding-top: 150px;
+}
+
+.rules-heading {
+    max-width: 500px;
+     margin: auto;
+}
+
+.rules .grid h3 {
+    font-size: 35px;
+}
+
+.rules .grid p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /* Command line interface (= CLI)*/
 
 .cli .grid {
@@ -193,6 +214,84 @@ code, pre {
     width: auto;
     justify-self:center;
     border-radius: 20px;
+}
+
+/*Presentation*/
+
+.presentation {
+    height: 400px;
+    background-color: var(--primary-color) ;
+    color:var(--text-color-on-primary-color);
+    position: relative;
+}
+
+.presentation h1 {
+    margin: 30px 0;
+    font-size: 40px;
+}
+
+.presentation p {
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+.presentation-form p {
+    color: var(--secondary-color);
+    font-size: 23px;
+}
+
+.presentation ul li a {
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.presentation-image {
+    position: relative;
+    top: 30px;
+    height: auto;
+    width: 450px; /* updated to match text leght*/
+    z-index: 100;
+    justify-self: flex-end; /* to push form to the right */
+}
+
+.presentation-image {
+    margin: 30px 0;
+}
+
+.presentation-image img{
+    border-radius: 15px;
+}
+
+.presentation-image input:focus {
+    outline: none;
+}
+
+.presentation .grid {
+    overflow: visible; /* pour effacer les curseurs de navigation haut/bas an affichant ce qui dépasse directement */
+    grid-template-columns: 55% auto;
+    gap: 30px;
+}
+
+.presentation-description p {
+    color:var(--text-color-on-backgroud);
+    font-size: 20px;
+    margin: 150px 150px 25px;
+    justify-self:center;
+}
+
+.presentation::before,
+.presentation::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left:0;
+    background: rgb(255, 255, 255);
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
 }
 
 /* Internships */
