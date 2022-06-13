@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[french]{babel}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{hyperref}
+\hypersetup{
+    linktoc=all, %set to all if you want both sections and subsections linked
+}
+%\usepackage{cite}
+%\usepackage{lipsum}
+
+%\usepackage{authblk} %FOR CENTER AUTHOR IMPORTANT !!! DONT ERASE
+
+\title{{\huge UE Simulating Life\\Legionella pneumophila bacterium simulation with toxic agent}}
+\author{$ $\\{\LARGE Sacha Duperret}\\ $ $\\ \href{mailto:sduperret@u-bordeaux.fr}{sduperret@u-bordeaux.fr}\\Université de Bordeaux,\\Talence,\\France}
+\date{11 juin 2022}
+
+
+
+%Graphicx
+\usepackage{graphicx} %Loading the package
+\graphicspath{{images/}} %path to figures
+
+
+\begin{document}
+\maketitle
+
+Legionella pneumophila is a ubiquitous bacterium, which colonizes artificial environments, wet soils as well as natural fresh water. Bacteria are transmitted to humans by aerosolization and less often by aspiration (to the lung) of colonized water.
+
+\section*{Clinical description}
+Human legionellosis is a form of bacterial pneumonia of varying severity, sometimes fatal. Signs and symptoms includes high to moderate fiver, cough, muscle pain, headaches, shortness of breath. Sometimes digestive disorders such as nausea, vomiting and diarrhea, as well as neurological disorders occur.
+
+\section*{Simulation framework} The purpose of this simulation is to show the impact of the use of an agent toxic to bacteria on the latter. For this, we have implemented a system of sliders that can be modified to adjust the values of the agent's toxicity and its rate (output). To this, we have added a color code that shows the remaining strength of the toxic agents (red, orange, pink then purple).
+
+\section*{The figures}
+At the start of the simulation, there are therefore :
+\begin{itemize}
+\item 200 Legionellosis pneumophila bacteria,
+\item 18 toxic agents (with 39 energy each).
+\end{itemize}
+
+\section*{Operation and explanations of the simulation}
+After clicking on the setup and forever buttons, we observe that the entities start to move in the frame. We also observe the evolution of color of toxic agents, as long as they lose their effectiveness.\\
+
+
+Now let's observe the release of toxic agents, the agents come out little by little, following a logical system, and are renewed once removed. In the graph below, we clearly observe the different waves of agents, as well as their multiplication until giving an almost continuous flow of toxins. With lower peaks (a lower number) but an increase in the base of the curve (therefore a higher quantity).
+
+\begin{figure}[h!]
+Graph representing waves of toxic agents :
+\begin{center}
+	\includegraphics[scale=0.30]{graph-agents.png} 
+\end{center}
+\end{figure}
+
+\section*{Hypotheses}
+In theory, the relationship between the quantity of toxic agent and the development of bacteria should be the following:
+\begin{itemize}
+\item the more toxic agents there are, the less bacteria there are,
+\item the less toxic agents there are, the more bacteria there are,
+\item there is a point of equilibrium where the level of bacteria is constant over time (perennial) against a precise quantity of toxic agents.
+\end{itemize}
+
+\section*{Conclusion}
+From our simulations of different situations, we can conclude that our hypothesis is verified.
+
+Indeed, the correlation between the quantity of toxic agents and the development of Legionella pneumophila bacteria can be observed on the main graph, as well as by looking at the main display screen of the simulation.
+
+The equilibrium situation is also present. We had trouble finding it given the sustainability constraints of the state. Indeed, if we were in balance for a short period of time, it was not guaranteed over a longer period. For this, and in the future, we could use the custom commands included in the framework, with a touch of JavaScript.
+
+
+
+\end{document}
